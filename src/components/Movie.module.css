@@ -12,6 +12,7 @@
   text-decoration: none;
 }
 
+.movie__rating,
 .movie__title,
 .movie__year {
   margin: 0;
@@ -32,16 +33,34 @@
   flex-wrap: wrap;
 }
 
-.movie__genres li,
-.movie__year {
+.movie__rating,
+.movie__genres li {
   margin-right: 8px;
   font-size: 15px;
 }
 
 .movie {
   background-color: white;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   padding: 10px;
   border-radius: 5px;
   color: #494949;
+}
+
+.movie__logo {
+  width: 32px;
+  height: 18px;
+  margin-top: 4px;
+  margin-right: 4px;
+  display: flex;
+}
+
+.movie__info {
+  padding-top: 8px;
+  display: flex;
+}
+
+.movie__year {
+  margin-right: 8px;
+  font-size: 16px;
 }
