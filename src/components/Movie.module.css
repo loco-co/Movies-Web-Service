@@ -1,0 +1,47 @@
+.movie__image {
+  max-width: 200px;
+  width: 100%;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.movie__title a {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #2c2c2c;
+  text-decoration: none;
+}
+
+.movie__title,
+.movie__year {
+  margin: 0;
+  margin-top: 2px;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.movie__genres {
+  list-style: none;
+  padding: 0;
+  margin: 3px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie__genres li,
+.movie__year {
+  margin-right: 8px;
+  font-size: 15px;
+}
+
+.movie {
+  background-color: white;
+  margin-bottom: 70px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #494949;
+}
