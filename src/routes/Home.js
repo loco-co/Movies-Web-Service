@@ -41,7 +41,7 @@ function Home() {
               <Movie
                 key={movie.id}
                 id={movie.id}
-                thumb_img={movie.medium_cover_image}
+                thumb_img={movie.large_cover_image}
                 title={movie.title}
                 year={movie.year}
                 summary={movie.summary}

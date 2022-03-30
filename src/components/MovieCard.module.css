@@ -55,7 +55,7 @@
 
 .movie__detail {
   display: flex;
-  justify-content: end;
+  justify-content: right;
   font-weight: 500;
 }
 
