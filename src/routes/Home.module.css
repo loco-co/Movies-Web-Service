@@ -27,3 +27,8 @@
   font-size: 40px;
   padding-left: 50px;
 }
+
+.title a {
+  text-decoration: none;
+  color: #2c2c2c;
+}

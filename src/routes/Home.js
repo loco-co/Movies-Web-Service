@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie";
 import styles from "./Home.module.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [loading, setLoading] = useState("true");
@@ -10,7 +11,7 @@ function Home() {
   const getMovies = async () => {
     const [response1, response2, response3] = await Promise.all([
       fetch(
-        `https://yts.mx/api/v2/list_movies.json?sort_by=year&with_rt_ratings=true&limit=6`
+        `https://yts.mx/api/v2/list_movies.json?sort_by=year&with_rt_ratings=true&minimum_rating=4&limit=6`
       ),
       fetch(
         `https://yts.mx/api/v2/list_movies.json?minimum_rating=8&with_rt_ratings=true&limit=6`
@@ -34,7 +35,7 @@ function Home() {
         <h1 className={styles.loader}>Loading...</h1>
       ) : (
         <div className={styles.container}>
-          <h1 className={styles.title}>Most Recent Movies</h1>
+          <h1 className={styles.title}><Link to={"/recent_movies"}>Most Recent Movies</Link></h1>
           <div className={styles.movies}>
             {recentMovies.map((movie) => (
               <Movie
@@ -49,7 +50,7 @@ function Home() {
               />
             ))}
           </div>
-          <h1 className={styles.title}>2160p Quality Movies</h1>
+          <h1 className={styles.title}><Link to={"/2160p_movies"}>2160p Quality Movies</Link></h1>
           <div className={styles.movies}>
             {highMovies.map((movie) => (
               <Movie
@@ -64,7 +65,7 @@ function Home() {
               />
             ))}
           </div>
-          <h1 className={styles.title}>Top Rated Movies</h1>
+          <h1 className={styles.title}><Link to={"/top_movies"}>Top Rated Movies</Link></h1>
           <div className={styles.movies}>
             {ratedMovies.map((movie) => (
               <Movie
