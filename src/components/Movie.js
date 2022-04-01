@@ -10,7 +10,7 @@ function Movie({ id, title, thumb_img, year, summary, genres, rating }) {
       <h1 className={styles.movie__title}><Link to={`/movie/${id}`}>{title}</Link></h1>
       <div className={styles.movie__info}>
       <h3 className={styles.movie__year}>{year}</h3>
-      <img className={styles.movie__logo} src={imdb} /><h3 className={styles.movie__rating}>{rating}</h3>
+      <img className={styles.movie__logo} src={imdb} alt="imdb"/><h3 className={styles.movie__rating}>{rating}</h3>
       </div>
       <ul className={styles.movie__genres}>
         {genres.map((g) => (

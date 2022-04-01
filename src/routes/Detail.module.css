@@ -1,3 +1,74 @@
 .container {
-    
+  height: 100%;
+  justify-content: center;
+  background-color: snow;
+  padding: 0px 150px;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+}
+
+.movie__blurPoster {
+  width: 700px;
+  border-radius: 12px;
+  border: 2px solid white;
+  box-shadow: rgb(0 0 0 / 30%) 0px 0px 2px;
+}
+
+.blurBlock {
+  display: flex;
+}
+
+.movie__screenshots {
+  width: 230px;
+}
+
+.movie__mainPoster {
+  margin: -80px 80px;
+  z-index: 1;
+  width: 200px;
+  border-radius: 3px;
+  border: 2px solid white;
+  box-shadow: rgb(0 0 0 / 30%) 0px 0px 2px;
+}
+
+.contentBlock {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  border-bottom: 1px solid grey;
+}
+
+.movie__title {
+    font-size: 36px;
+}
+
+.movie__info {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.movie__detail {
+  font-weight: 400;
+  font-size: 21px;
+}
+
+.movie__logo {
+  width: 36px;
+  height: 20px;
+  margin-top: 20px;
+  margin-right: 8px;
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
+  height: 30px;
 }

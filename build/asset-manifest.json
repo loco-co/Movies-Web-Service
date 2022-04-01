@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/loco-co/Movies-Web-Service/static/css/main.fbaa9659.css",
-    "main.js": "/loco-co/Movies-Web-Service/static/js/main.9dfdbe6c.js",
-    "index.html": "/loco-co/Movies-Web-Service/index.html",
-    "main.fbaa9659.css.map": "/loco-co/Movies-Web-Service/static/css/main.fbaa9659.css.map",
-    "main.9dfdbe6c.js.map": "/loco-co/Movies-Web-Service/static/js/main.9dfdbe6c.js.map"
+    "main.css": "/Movies-Web-Service/static/css/main.fbaa9659.css",
+    "main.js": "/Movies-Web-Service/static/js/main.cf1aa3b1.js",
+    "index.html": "/Movies-Web-Service/index.html",
+    "main.fbaa9659.css.map": "/Movies-Web-Service/static/css/main.fbaa9659.css.map",
+    "main.cf1aa3b1.js.map": "/Movies-Web-Service/static/js/main.cf1aa3b1.js.map"
   },
   "entrypoints": [
     "static/css/main.fbaa9659.css",
-    "static/js/main.9dfdbe6c.js"
+    "static/js/main.cf1aa3b1.js"
   ]
 }
