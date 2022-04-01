@@ -11,7 +11,7 @@ function Home() {
   const getMovies = async () => {
     const [response1, response2, response3] = await Promise.all([
       fetch(
-        `https://yts.mx/api/v2/list_movies.json?sort_by=year&with_rt_ratings=true&minimum_rating=4&limit=6`
+        `https://yts.mx/api/v2/list_movies.json?with_rt_ratings=true&minimum_rating=4&limit=6`
       ),
       fetch(
         `https://yts.mx/api/v2/list_movies.json?minimum_rating=8&with_rt_ratings=true&limit=6`

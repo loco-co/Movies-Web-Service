@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
-import styles from "./list.module.css";
+import styles from "./List.module.css";
 
 function RatedMovies() {
   const [loading, setLoading] = useState("true");
