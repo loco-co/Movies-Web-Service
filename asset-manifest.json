@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/loco-co/Movies-Web-Service/static/css/main.fbaa9659.css",
+    "main.js": "/loco-co/Movies-Web-Service/static/js/main.9dfdbe6c.js",
+    "index.html": "/loco-co/Movies-Web-Service/index.html",
+    "main.fbaa9659.css.map": "/loco-co/Movies-Web-Service/static/css/main.fbaa9659.css.map",
+    "main.9dfdbe6c.js.map": "/loco-co/Movies-Web-Service/static/js/main.9dfdbe6c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbaa9659.css",
+    "static/js/main.9dfdbe6c.js"
+  ]
+}
