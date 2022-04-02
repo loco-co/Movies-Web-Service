@@ -27,7 +27,24 @@
 }
 
 .movie__screenshots {
+  display: flex;
+  padding: 4px 0px;
+}
+
+.movie__screenshot {
   width: 230px;
+  border-radius: 2px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+.selected {
+  width: 230px;
+  border-radius: 2px;
+  margin-right: 4px;
+  border: 1px solid white;
+  box-shadow: rgb(0 0 0 / 30%) 0px 0px 8px;
+  cursor: pointer;
 }
 
 .movie__mainPoster {
@@ -65,7 +82,7 @@
 .movie__logo {
   width: 36px;
   height: 20px;
-  margin-top: 20px;
+  margin-top: 21px;
   margin-right: 8px;
 }
 
@@ -87,4 +104,19 @@
   width: 700px;
   font-weight: 300;
   font-size: 17px;
+}
+
+.selectedShot {
+  width: 780px;
+  margin-left: -50px;
+  border-radius: 2px;
+  padding-bottom: 110px;
+}
+
+.movie__screenshot:hover{
+  transform: scale(1.01);
+}
+
+.selected:hover{
+  transform: scale(1.01);
 }

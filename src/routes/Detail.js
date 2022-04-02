@@ -5,7 +5,6 @@ import imdb from "../images/IMDB.png";
 import defaultS from "../images/defaultS.jpg";
 import defaultP from "../images/defaultP.jfif";
 
-
 function Detail() {
   const [loading, setLoading] = useState("true");
   const [movie, setMovie] = useState({});
@@ -17,7 +16,6 @@ function Detail() {
       )
     ).json();
     setMovie(json.data.movie);
-    console.log(json.data);
     setLoading(false);
   };
   useEffect(() => getMovie(), []);
@@ -51,7 +49,8 @@ function Detail() {
                 {movie.genres && movie.genres.map((g) => `・${g}`)}
               </h3>
               <div className={styles.logo}>
-              <img className={styles.movie__logo} src={imdb} alt="imdb"/><h5 className={styles.movie__rating}>{movie.rating}</h5>
+                <img className={styles.movie__logo} src={imdb} alt="imdb" />
+                <h5 className={styles.movie__rating}>{movie.rating}</h5>
               </div>
               <h4 className={styles.movie__info}>
                 {movie.runtime < 1 ? "unknown" : movie.runtime} minutes ・{" "}
@@ -61,29 +60,52 @@ function Detail() {
           </div>
           <div>
             <h3 className={styles.movie__cast}>Cast</h3>
-          <h3 className={styles.movie__cast}>{movie.cast ? movie.cast.map((c) => <div>{c.name}{c.character_name ? ` (${c.character_name})` : ""}</div>) : <div>No Credit Yet</div>} </h3>
-          <p className={styles.movie__plot}>{movie.description_full}</p>
+            <h3 className={styles.movie__cast}>
+              {movie.cast ? (
+                movie.cast.map((c) => (
+                  <div key={c.name}>
+                    {c.name}
+                    {c.character_name ? ` (${c.character_name})` : ""}
+                  </div>
+                ))
+              ) : (
+                <div>No Credit Yet</div>
+              )}{" "}
+            </h3>
+            <p className={styles.movie__plot}>{movie.description_full}</p>
+          </div>
+          <div className={styles.movie__screenshots}>
+            <img
+              className={styles.selected}
+              src={movie.large_screenshot_image1}
+              alt={movie.title}
+              onError={handleScreenshotError}
+              onMouseDown={handeleClickScreenshot}
+              id="s1"
+            />
+            <img
+              className={styles.movie__screenshot}
+              src={movie.large_screenshot_image2}
+              alt={movie.title}
+              onError={handleScreenshotError}
+              onMouseDown={handeleClickScreenshot}
+              id="s2"
+            />
+            <img
+              className={styles.movie__screenshot}
+              src={movie.large_screenshot_image3}
+              alt={movie.title}
+              onError={handleScreenshotError}
+              onMouseDown={handeleClickScreenshot}
+              id="s3"
+            />
           </div>
           <img
-            className={styles.movie__screenshots}
+            className={styles.selectedShot}
             src={movie.large_screenshot_image1}
             alt={movie.title}
             onError={handleScreenshotError}
-            
-          />
-          <img
-            className={styles.movie__screenshots}
-            src={movie.large_screenshot_image2}
-            alt={movie.title}
-            onError={handleScreenshotError}
-
-          />
-          <img
-            className={styles.movie__screenshots}
-            src={movie.large_screenshot_image3}
-            alt={movie.title}
-            onError={handleScreenshotError}
-
+            id="selected"
           />
         </div>
       )}
@@ -91,12 +113,24 @@ function Detail() {
   );
 }
 
-const handlePosterError = (e) => {
-  e.target.src = defaultP
-}
+const handlePosterError = (event) => {
+  event.target.src = defaultP;
+};
 
-const handleScreenshotError = (e) => {
-  e.target.src = defaultS
-}
+const handleScreenshotError = (event) => {
+  event.target.src = defaultS;
+};
+
+const handeleClickScreenshot = (event) => {
+  const target = document.getElementById("selected");
+  target.src = event.target.src;
+  const s1 = document.getElementById("s1");
+  const s2 = document.getElementById("s2");
+  const s3 = document.getElementById("s3");
+  s1.className = styles.movie__screenshot;
+  s2.className = styles.movie__screenshot;
+  s3.className = styles.movie__screenshot;
+  event.target.className = styles.selected;
+};
 
 export default Detail;
