@@ -8,7 +8,7 @@ function RecentMovies() {
   const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?sort_by=year&with_rt_ratings=true&minimum_rating=4`
+        `https://yts.mx/api/v2/list_movies.json?with_rt_ratings=true&minimum_rating=4`
       )
     ).json();
     setMovies(json.data.movies);

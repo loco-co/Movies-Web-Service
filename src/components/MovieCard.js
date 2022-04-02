@@ -1,11 +1,12 @@
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./MovieCard.module.css";
+import defaultP from "../images/defaultP.jfif";
 
 function MovieCard({ id, title, thumb_img, year, summary, genres, rating }) {
   return (
     <div className={styles.movie}>
-      <Link to={`/movie/${id}`}><img src={thumb_img} alt={title} className={styles.movie__img} /></Link>
+      <Link to={`/movie/${id}`}><img src={thumb_img} alt={title} className={styles.movie__img} onError={handlePosterError} /></Link>
       <div>
         <h2 className={styles.movie__title}>
           <Link to={`/movie/${id}`}>{title}</Link>
@@ -30,5 +31,9 @@ MovieCard.propTypes = {
   summary: propTypes.string.isRequired,
   genres: propTypes.arrayOf(propTypes.string.isRequired).isRequired,
 };
+
+const handlePosterError = (e) => {
+  e.target.src = defaultP
+}
 
 export default MovieCard;
